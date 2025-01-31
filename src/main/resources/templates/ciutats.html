@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Ciutats</title>
+</head>
+<body>
+<h1>Ciutats amb més de <span th:text="${poblacioMinima}"></span> habitants</h1>
+<ul>
+  <!-- Itera per cada ciutat i mostra el seu nom -->
+  <li th:each="ciutat : ${ciutats}" th:text="${ciutat.nom}"></li>
+</ul>
+</body>
+</html>

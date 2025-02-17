@@ -1,5 +1,6 @@
 package com.jonas.CiutatsLlista.model.Entitats;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -17,6 +18,7 @@ import java.util.List;
         String imatge;
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "ID_PROVINCIA")
+    @JsonIgnoreProperties("ciutats")
     private Provincia provincia;
 
         public Ciutat(long id, String nom, int poblacio, String descripcio, String imatge) {

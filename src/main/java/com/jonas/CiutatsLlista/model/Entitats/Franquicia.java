@@ -1,5 +1,6 @@
 package com.jonas.CiutatsLlista.model.Entitats;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -35,7 +36,7 @@ public class Franquicia {
     public void setNom(String nom) {
         this.nom = nom;
     }
-
+    @JsonIgnoreProperties("franquicias")
     @ManyToMany(mappedBy = "franquicias")
     private List<Ciutat> ciudades;
 }

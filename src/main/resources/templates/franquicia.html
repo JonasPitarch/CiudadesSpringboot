@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Províncies</title>
+    <title>Franquicias</title>
     <link rel="stylesheet" type="text/css" href="/css/provincias.css" />
 </head>
 <body>
-<h1>Listado de provincias</h1>
+<h1>Listado de franquicias</h1>
 <ul>
-    <li th:each="provincia : ${provincies}" th:text="${provincia.nom}"></li>
+    <li th:each="franquicia : ${franquicias}" th:text="${franquicia.nom}"></li>
 </ul>
 </body>
 </html>
